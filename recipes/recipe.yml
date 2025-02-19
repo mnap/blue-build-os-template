@@ -31,8 +31,10 @@ modules:
       - fd-find
       - bfs
       - NetworkManager-tui
-      - tldr
-      - flameshot # screenshot tool
+      - syncthing
+      - tldr # help/cheet sheets
+      - flameshot # screenshot
+      - fastfetch # system info
     remove:
       # "firefox" is the main package, "firefox-langpacks" is a dependency; remove firefox-langs first then firefox, otherwise build throws error
       - firefox-langpacks
