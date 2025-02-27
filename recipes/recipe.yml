@@ -19,8 +19,10 @@ modules:
   - type: rpm-ostree
     repos:
       - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/cboxdoerfer/fsearch_nightly/repo/fedora-%OS_VERSION%/cboxdoerfer-fsearch_nightly-fedora-$OS_VERSION%.repo
     install:
       - starship
+      - fsearch_nightly # the non-nighly version in COPR has dependency errors during installing; also experienced by other users
 
   - type: rpm-ostree
     install:
@@ -55,6 +57,7 @@ modules:
         - net.ankiweb.Anki
         - org.keepassxc.KeePassXC
         - org.signal.Signal
+        - us.zoom.Zoom
       # remove:
       #   - org.gnome.eog
     # user: {} # Also add Flathub user repo, but no user packages
