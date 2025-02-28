@@ -57,7 +57,6 @@ modules:
         - org.zotero.Zotero
         - net.ankiweb.Anki
         - org.keepassxc.KeePassXC
-        - org.signal.Signal
         - us.zoom.Zoom
       # remove:
       #   - org.gnome.eog
