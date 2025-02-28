@@ -58,6 +58,7 @@ modules:
         - net.ankiweb.Anki
         - org.keepassxc.KeePassXC
         - us.zoom.Zoom
+        - com.brave.Browser
       # remove:
       #   - org.gnome.eog
     # user: {} # Also add Flathub user repo, but no user packages
