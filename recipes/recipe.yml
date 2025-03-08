@@ -38,6 +38,7 @@ modules:
       - tldr # help/cheet sheets
       - flameshot # screenshot
       - fastfetch # system info
+      - gcc # needed by brew module (see below)
     remove:
       # "firefox" is the main package, "firefox-langpacks" is a dependency; remove firefox-langs first then firefox, otherwise build throws error
       - firefox-langpacks
