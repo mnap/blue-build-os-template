@@ -38,7 +38,6 @@ modules:
       - tldr # help/cheet sheets
       - flameshot # screenshot
       - fastfetch # system info
-      - gcc # needed by brew module?
     remove:
       # "firefox" is the main package, "firefox-langpacks" is a dependency; remove firefox-langs first then firefox, otherwise build throws error
       - firefox-langpacks
@@ -65,7 +64,3 @@ modules:
       #   - org.gnome.eog
     # user: {} # Also add Flathub user repo, but no user packages
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
-
-  # install homebrew
-  - type: brew
-    brew-analytics: false # disable telemetry
