@@ -38,7 +38,7 @@ modules:
       - tldr # help/cheet sheets
       - flameshot # screenshot
       - fastfetch # system info
-      - gcc # needed by brew module (see below)
+      - gcc # needed by brew module?
     remove:
       # "firefox" is the main package, "firefox-langpacks" is a dependency; remove firefox-langs first then firefox, otherwise build throws error
       - firefox-langpacks
@@ -60,6 +60,7 @@ modules:
         - org.keepassxc.KeePassXC
         - us.zoom.Zoom
         - com.brave.Browser
+        - com.github.tchx84.Flatseal
       # remove:
       #   - org.gnome.eog
     # user: {} # Also add Flathub user repo, but no user packages
