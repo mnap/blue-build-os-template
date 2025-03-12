@@ -28,16 +28,17 @@ modules:
   - type: rpm-ostree
     install:
       - emacs
-      - nnn
       - fzf
       - ripgrep
       - fd-find
       - bfs
-      - NetworkManager-tui
       - syncthing
+      - libxcrypt-compat # needed to make biber (texlive) work
+      - NetworkManager-tui # nmtui
       - tldr # help/cheet sheets
       - flameshot # screenshot
       - fastfetch # system info
+      - nnn
     remove:
       # "firefox" is the main package, "firefox-langpacks" is a dependency; remove firefox-langs first then firefox, otherwise build throws error
       - firefox-langpacks
