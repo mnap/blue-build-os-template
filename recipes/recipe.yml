@@ -38,6 +38,8 @@ modules:
       - tldr # help/cheet sheets
       - flameshot # screenshot
       - fastfetch # system info
+      - restic # backup tool
+      - ncdu # disk usage
       - nnn
     remove:
       # "firefox" is the main package, "firefox-langpacks" is a dependency; remove firefox-langs first then firefox, otherwise build throws error
@@ -61,6 +63,8 @@ modules:
         - us.zoom.Zoom
         - com.brave.Browser
         - com.github.tchx84.Flatseal
+        - com.github.xournalpp.xournalpp
+        - io.mpv.Mpv
       # remove:
       #   - org.gnome.eog
     # user: {} # Also add Flathub user repo, but no user packages
