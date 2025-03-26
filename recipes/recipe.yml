@@ -62,6 +62,8 @@ modules:
         - com.github.tchx84.Flatseal
         - com.github.xournalpp.xournalpp
         - io.mpv.Mpv
+        - org.libreoffice.LibreOffice
+        - com.github.johnfactotum.Foliate
       # remove:
       #   - org.gnome.eog
     # user: {} # Also add Flathub user repo, but no user packages
