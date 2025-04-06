@@ -30,6 +30,7 @@ modules:
       - fd-find
       - bfs
       - syncthing
+      - thunderbird
       - libxcrypt-compat # needed to make biber (texlive) work
       - NetworkManager-tui # nmtui
       - tldr # help/cheet sheets
@@ -37,11 +38,11 @@ modules:
       - fastfetch # system info
       - restic # backup tool
       - ncdu # disk usage
-      - nnn
-    remove:
-      # "firefox" is the main package, "firefox-langpacks" is a dependency; remove firefox-langs first then firefox, otherwise build throws error
-      - firefox-langpacks
-      - firefox
+      - udiskie # usb automount
+    # remove:
+    #   # "firefox" is the main package, "firefox-langpacks" is a dependency; remove firefox-langs first then firefox, otherwise build throws error
+    #   - firefox-langpacks
+    #   - firefox
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
@@ -50,10 +51,10 @@ modules:
       repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
       repo-name: flathub
       install:
-        - org.mozilla.firefox
+        # - org.mozilla.firefox
         - org.goldendict.GoldenDict
         - org.kde.okular
-        - org.mozilla.Thunderbird
+        # - org.mozilla.Thunderbird
         - org.zotero.Zotero
         - net.ankiweb.Anki
         - org.keepassxc.KeePassXC
