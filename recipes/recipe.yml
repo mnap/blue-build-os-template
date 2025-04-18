@@ -38,7 +38,6 @@ modules:
       - fastfetch # system info
       - restic # backup tool
       - ncdu # disk usage
-      - udiskie # usb automount
     # remove:
     #   # "firefox" is the main package, "firefox-langpacks" is a dependency; remove firefox-langs first then firefox, otherwise build throws error
     #   - firefox-langpacks
