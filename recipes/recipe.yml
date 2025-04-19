@@ -38,6 +38,7 @@ modules:
       - fastfetch # system info
       - restic # backup tool
       - ncdu # disk usage
+      - trash-cli # delete by moving to trash
     # remove:
     #   # "firefox" is the main package, "firefox-langpacks" is a dependency; remove firefox-langs first then firefox, otherwise build throws error
     #   - firefox-langpacks
