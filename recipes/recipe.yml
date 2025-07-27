@@ -52,27 +52,28 @@ modules:
     #   - firefox
 
   - type: default-flatpaks
-    notify: true # Send notification after install/uninstall is finished (true/false)
-    system:
-      # If no repo information is specified, Flathub will be used by default
-      repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
-      repo-name: flathub
-      install:
-        # - org.mozilla.firefox
-        - org.goldendict.GoldenDict
-        - org.kde.okular
-        # - org.mozilla.Thunderbird
-        - org.zotero.Zotero
-        - net.ankiweb.Anki
-        - org.keepassxc.KeePassXC
-        - us.zoom.Zoom
-        - com.brave.Browser
-        - com.github.tchx84.Flatseal
-        - com.github.xournalpp.xournalpp
-        - io.mpv.Mpv
-        - org.libreoffice.LibreOffice
-        - com.github.johnfactotum.Foliate
-      # remove:
-      #   - org.gnome.eog
-    # user: {} # Also add Flathub user repo, but no user packages
+    configurations:
+      - notify: true # Send notification after install/uninstall is finished (true/false)
+        scope: system
+        repo:
+          url: https://dl.flathub.org/repo/flathub.flatpakrepo
+          name: flathub
+        install:
+          # - org.mozilla.firefox
+          - org.goldendict.GoldenDict
+          - org.kde.okular
+          # - org.mozilla.Thunderbird
+          - org.zotero.Zotero
+          - net.ankiweb.Anki
+          - org.keepassxc.KeePassXC
+          - us.zoom.Zoom
+          - com.brave.Browser
+          - com.github.tchx84.Flatseal
+          - com.github.xournalpp.xournalpp
+          - io.mpv.Mpv
+          - org.libreoffice.LibreOffice
+          - com.github.johnfactotum.Foliate
+          - net.nokyan.Resources # system monitor
+        #remove:
+        #  - org.gnome.eog
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
