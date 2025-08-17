@@ -54,6 +54,7 @@ modules:
           - trash-cli # delete by moving to trash
           - fuse-sshfs # sshfs
           - rclone # cloud storage sync
+          - wl-mirror # mirror screen/output
     
   - type: default-flatpaks
     configurations:
