@@ -53,6 +53,7 @@ modules:
           - ncdu # disk usage
           - trash-cli # delete by moving to trash
           - fuse-sshfs # sshfs
+          - rclone # cloud storage sync
     
   - type: default-flatpaks
     configurations:
