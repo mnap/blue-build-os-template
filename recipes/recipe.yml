@@ -34,6 +34,27 @@ modules:
         packages:
           - tailscale
 
+  # media/mulitmedia codecs needed for (natively intalled) firefox; (see 20251019t014630 in my notes (private))
+  # source: https://rpmfusion.org/Howto/OSTree
+  - type: dnf
+    repos:
+      cleanup: true
+      nonfree: rpmfusion
+    install:
+      packages:
+        - intel-media-driver
+        - gstreamer1-plugin-libav
+        - gstreamer1-plugins-bad-free-extras
+        - gstreamer1-plugins-bad-freeworld
+        - gstreamer1-plugins-ugly
+        - gstreamer1-vaapi
+    replace:
+      - from-repo: rpmfusion-nonfree
+        allow-erasing: true
+        packages:
+          - old: ffmpeg-free
+            new: ffmpeg
+
   - type: dnf
     install:
         packages:
